@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /Users/luigi/Desktop/snakemake-tutorial/Snakefile:
+Missing input files for rule all:
+report.html

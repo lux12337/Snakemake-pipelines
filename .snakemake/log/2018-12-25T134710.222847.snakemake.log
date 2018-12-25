@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	samtools_sort
+	1
+
+[Tue Dec 25 13:47:10 2018]
+rule samtools_sort:
+    input: mapped_reads/A.bam
+    output: sorted_reads/A.bam
+    jobid: 0
+    wildcards: sample=A
+
+[Tue Dec 25 13:47:10 2018]
+Error in rule samtools_sort:
+    jobid: 0
+    output: sorted_reads/A.bam
+
+RuleException:
+CalledProcessError in line 23 of /Users/luigi/Desktop/snakemake-tutorial/Snakefile:
+Command ' set -euo pipefail;  samtools sort -T sorted_reads/A -0 bam mapped_reads/A.bam > sorted_reads/A.bam ' returned non-zero exit status 1.
+  File "/Users/luigi/Desktop/snakemake-tutorial/Snakefile", line 23, in __rule_samtools_sort
+  File "/Users/luigi/miniconda3/envs/snakemake-tutorial/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job samtools_sort since they might be corrupted:
+sorted_reads/A.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/luigi/Desktop/snakemake-tutorial/.snakemake/log/2018-12-25T134710.222847.snakemake.log
