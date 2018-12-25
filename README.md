@@ -1,3 +1,2 @@
-# Skeleton for the Snakemake tutorial
-
-This repository hosts the skeleton code needed for the [Snakemake tutorial](http://snakemake.readthedocs.io/en/latest/tutorial/welcome.html).
+# Simple snakemake pipeline
+Setup snakemake on my machine and ran a simple pipeline to familiarize myself with the concept
